@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
@@ -40,6 +41,12 @@ public class PlayerCharacter : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision with: " + collision.gameObject.name);
+
+        if (collision.gameObject.CompareTag("KillObject"))
+        {
+            EditorApplication.isPlaying = false;
+            Application.Quit();
+        }
     }
 
 }

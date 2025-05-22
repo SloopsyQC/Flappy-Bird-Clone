@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5354095700685382241}
   m_Layer: 0
   m_Name: Upper
-  m_TagString: Untagged
+  m_TagString: KillObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 8085268007778768734, guid: d95d0a1b9a5a4c44482f9e648f7dfed5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 5472131316983280848}
   m_Layer: 0
   m_Name: Lower
-  m_TagString: Untagged
+  m_TagString: KillObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 8085268007778768734, guid: d95d0a1b9a5a4c44482f9e648f7dfed5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -277,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2010729432662658974}
+  - component: {fileID: 3086246712535832789}
   m_Layer: 0
   m_Name: Pipes
   m_TagString: Untagged
@@ -293,7 +294,7 @@ Transform:
   m_GameObject: {fileID: 8912250612680377032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.4, y: -6.357827, z: 0}
+  m_LocalPosition: {x: 7, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -301,3 +302,17 @@ Transform:
   - {fileID: 3874220911802606677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3086246712535832789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8912250612680377032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1f01c0a0e671945819cf75297ad670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  maxX: -5
