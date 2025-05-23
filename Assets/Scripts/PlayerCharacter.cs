@@ -25,7 +25,7 @@ public class PlayerCharacter : MonoBehaviour
         if (IsKeyPressed(KeyCode.Space))
         {
             Jump();
-        }   
+        }
     }
 
     private bool IsKeyPressed(KeyCode keyCode)
@@ -44,9 +44,14 @@ public class PlayerCharacter : MonoBehaviour
 
         if (collision.gameObject.CompareTag("KillObject"))
         {
-            EditorApplication.isPlaying = false;
-            Application.Quit();
+            GameManager.Instance.GameOver();
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Collision with: " + collision.gameObject.name);
+        GameManager.Instance.AddPoint();
     }
 
 }
